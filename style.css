@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f5f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #4a2c11;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #f4a261;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h2 {
+  color: #2b1810;
+  border-bottom: 2px solid #e76f51;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fafafa;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.product-card.clicked {
+  animation: click-flash 0.25s ease;
+}
+
+@keyframes click-flash {
+  0% {
+    background-color: #fafafa;
+    transform: scale(1);
+  }
+  50% {
+    background-color: #ffe9c5;
+    transform: scale(0.98);
+  }
+  100% {
+    background-color: #fafafa;
+    transform: scale(1);
+  }
+}
+
+.product-card h3 {
+  color: #2a9d8f;
+  margin-bottom: 0.5rem;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #e76f51;
+  margin-top: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #2b1810;
+  color: #fff;
+  font-size: 0.9rem;
+}
